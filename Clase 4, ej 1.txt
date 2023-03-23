@@ -1,0 +1,141 @@
+package c4e1;
+
+import java.util.Scanner;
+
+public class MetodosVector {
+
+	public static void main(String[] args) {
+			int a=12, b=0, c=15;
+			char asdes = 'd';
+			Scanner in = new Scanner(System.in);
+			
+			if (a!=0 && b!=0 && c!=0) {
+				if (asdes == 'a') {
+					Ascendente(a,b,c);
+				}
+				else {
+					Descendente(a,b,c);
+				}
+			}
+			
+			else{System.out.println("Necesitamos que ingrese 3 valores.");
+			System.out.println("Ingrese el primer valor:");
+			a = in.nextInt();
+			System.out.println("Ingrese el segundo valor:");
+			b = in.nextInt();
+			System.out.println("Ingrese el ultimo valor:");
+			c = in.nextInt();
+			if (asdes == 'a') {
+				Ascendente(a,b,c);
+			}
+			else {
+				Descendente(a,b,c);
+			}
+			}
+			
+	}
+		
+		private static void Descendente(int a, int b, int c) {int vec[]=new int[3]; 
+		if(a>b && a>c) {
+			if(b>c) {
+			vec[0]=a;
+			vec[1]=b;
+			vec[2]=c;
+			System.out.println("Los valores ordenados de forma descendente son:");
+			for(int i=0;i<vec.length;i++) {
+				System.out.println(vec[i]);}
+			}
+			else {
+			vec[0]=a;
+			vec[1]=c;
+			vec[2]=b;
+			System.out.println("Los valores ordenados de forma descendente son:");
+			for(int i=0;i<vec.length;i++) {
+				System.out.println(vec[i]);}}
+		}
+		else if(b>a && b>c) {
+			if(a>c) {
+			vec[0]=b;
+			vec[1]=a;
+			vec[2]=c;
+			System.out.println("Los valores ordenados de forma descendente son:");
+			for(int i=0;i<vec.length;i++) {
+				System.out.println(vec[i]);}
+			}
+			else {
+			vec[0]=b;
+			vec[1]=c;
+			vec[2]=a;
+			System.out.println("Los valores ordenados de forma descendente son:");
+			for(int i=0;i<vec.length;i++) {
+				System.out.println(vec[i]);}}
+		}
+		else if(b>a) {
+			vec[0]=c;
+			vec[1]=b;
+			vec[2]=a;
+			System.out.println("Los valores ordenados de forma descendente son:");
+			for(int i=0;i<vec.length;i++) {
+				System.out.println(vec[i]);}
+			}
+			else {
+			vec[0]=c;
+			vec[1]=a;
+			vec[2]=b;
+			System.out.println("Los valores ordenados de forma descendente son:");
+			for(int i=0;i<vec.length;i++) {
+				System.out.println(vec[i]);}}
+		}
+		private static void Ascendente(int a, int b, int c) {
+			int vec[]=new int[3]; 
+			if(a<b && a<c) {
+				if(b<c) {
+				vec[0]=a;
+				vec[1]=b;
+				vec[2]=c;
+				System.out.println("Los valores ordenados de forma ascendente son:");
+				for(int i=0;i<vec.length;i++) {
+					System.out.println(vec[i]);}
+				}
+				else {
+				vec[0]=a;
+				vec[1]=c;
+				vec[2]=b;
+				System.out.println("Los valores ordenados de forma ascendente son:");
+				for(int i=0;i<vec.length;i++) {
+					System.out.println(vec[i]);}}
+			}
+			else if(b<a && b<c) {
+				if(a<c) {
+				vec[0]=b;
+				vec[1]=a;
+				vec[2]=c;
+				System.out.println("Los valores ordenados de forma ascendente son:");
+				for(int i=0;i<vec.length;i++) {
+					System.out.println(vec[i]);}
+				}
+				else {
+				vec[0]=b;
+				vec[1]=c;
+				vec[2]=a;
+				System.out.println("Los valores ordenados de forma ascendente son:");
+				for(int i=0;i<vec.length;i++) {
+					System.out.println(vec[i]);}}
+			}
+			else if(b<a) {
+				vec[0]=c;
+				vec[1]=b;
+				vec[2]=a;
+				System.out.println("Los valores ordenados de forma ascendente son:");
+				for(int i=0;i<vec.length;i++) {
+					System.out.println(vec[i]);}
+				}
+				else {
+				vec[0]=c;
+				vec[1]=a;
+				vec[2]=b;
+				System.out.println("Los valores ordenados de forma ascendente son:");
+				for(int i=0;i<vec.length;i++) {
+					System.out.println(vec[i]);}}
+			}
+		}

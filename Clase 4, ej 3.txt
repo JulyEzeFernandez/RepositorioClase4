@@ -1,0 +1,20 @@
+package c4ej3;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class C4ej3 {
+
+	public static void main(String[] args) throws IOException {
+		String dir = "C:\\Users\\julia\\OneDrive\\Escritorio\\Trabajos para entregar\\Clase 4\\Nombres.txt";
+		String lista_nombres ="Diego\nEstela\nRicardo\nJulio\nRoberto\nJulieta\nJorgelina\nSabrina\nCarlos\nDaniel";
+		String nombres_separ[]=lista_nombres.split("\n");
+
+		System.out.println("Los nombres grabados en el archivo son:");
+		for (String nombre : nombres_separ){
+			System.out.println(nombre);
+			Files.writeString(Paths.get(dir),lista_nombres);
+		}
+	}
+
+}
